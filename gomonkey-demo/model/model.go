@@ -54,3 +54,24 @@ func (s PrivateMethodStruct) AreYouHungry() string {
 
 	return "I am hungry"
 }
+
+type Animal interface {
+	Run() error
+}
+
+type horse struct {
+	name int
+}
+
+func NewHorse() *horse {
+	return &horse{}
+}
+
+func (a *horse) Run() error {
+	return a.runImpl()
+}
+
+func (a *horse) runImpl() error {
+	fmt.Println("horse is running")
+	return nil
+}

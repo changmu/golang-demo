@@ -104,3 +104,19 @@ func TestApplyPrivateMethod(t *testing.T) {
 	ret := s.AreYouHungry()
 	a.Equal("I am hungry", ret)
 }
+
+// 暂时不支持的场景：替换不可导出结构的私有方法
+// 实测不可导出结构的公有方法已经可以替换
+func TestApplyPrivateStructPrivateMethod(t *testing.T) {
+	//a := assert.New(t)
+	//patches := gomonkey.NewPatches()
+	//defer patches.Reset()
+	//
+	//h := model.NewHorse()
+	//patches = patches.ApplyMethodFunc(h, "runImpl",
+	//	func() error {
+	//		return fmt.Errorf("err horse1")
+	//	})
+	//err := h.Run()
+	//a.NotNil(err)
+}
