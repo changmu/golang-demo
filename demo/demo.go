@@ -154,10 +154,10 @@ func draw(snake *Snake, food *Food) {
 	termbox.Clear(termbox.ColorDefault, termbox.ColorDefault)
 
 	for _, body := range snake.Body {
-		termbox.SetCell(body.X, body.Y, ' ', termbox.ColorGreen, termbox.ColorDefault)
+		termbox.SetCell(body.X, body.Y, 'x', termbox.ColorGreen, termbox.ColorDefault)
 	}
 
-	termbox.SetCell(food.Position.X, food.Position.Y, ' ', termbox.ColorYellow, termbox.ColorDefault)
+	termbox.SetCell(food.Position.X, food.Position.Y, 'a', termbox.ColorYellow, termbox.ColorDefault)
 
 	termbox.Flush()
 }
